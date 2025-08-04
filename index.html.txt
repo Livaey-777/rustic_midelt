@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Rustic Midelt</title>
+  <style>
+    body { font-family: sans-serif; direction: rtl; background: #f7f2ec; padding: 20px; color: #333; }
+    h1 { color: #6b4f3a; }
+    a { color: #6b4f3a; }
+  </style>
+</head>
+<body>
+  <h1>مرحباً بكم في Rustic Midelt</h1>
+  <p>
+    نحن فريق مغربي نقدم أفكار ديكور وأثاث بأسلوب Rustic،
+    نستخدم خشب طبيعي، حديد، وألوان دافئة لصناعة تجربة ديكورية فريدة.
+  </p>
+  <p>
+    نشارك أفكارنا وصور المنتجات على <strong>Pinterest</strong> لتصل لعدد أكبر من عشاق الديكور.
+  </p>
+  <p>
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </p>
+</body>
+</html>

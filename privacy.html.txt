@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>سياسة الخصوصية - Rustic Midelt</title>
+  <style>
+    body { font-family: sans-serif; direction: rtl; background: #fff; padding: 20px; color: #333; }
+    h1 { color: #6b4f3a; }
+  </style>
+</head>
+<body>
+  <h1>سياسة الخصوصية</h1>
+  <p>
+    نحن في Rustic Midelt نحترم خصوصيتكم. لا نقوم بجمع أي بيانات شخصية من الزوار.
+    لا نطلب أي معلومات حساسة مثل البريد الإلكتروني أو الاسم.
+  </p>
+  <p>
+    يتم استخدام هذا الموقع فقط لأغراض عرض محتوى الديكور ومشاركة الروابط نحو Pinterest.
+  </p>
+  <p>
+    من خلال استخدامكم لموقعنا، فإنكم توافقون على هذه السياسة.
+    إذا كان لديكم أي استفسار، يمكنكم التواصل معنا عبر Pinterest.
+  </p>
+  <p><strong>آخر تحديث:</strong> غشت 2025</p>
+</body>
+</html>
