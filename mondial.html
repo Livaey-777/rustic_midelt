@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚽ Mondial 2026 Sign Up</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: repeating-linear-gradient(
+        90deg,
+        #1d793b,
+        #1d793b 80px,
+        #228b45 80px,
+        #228b45 160px
+      );
+      position: relative;
+    }
+
+    /* ✨ Glow ناعم */
+    .light-effect {
+      position: fixed;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+      animation: moveLight 12s linear infinite;
+      z-index: 0;
+    }
+    @keyframes moveLight {
+      0%   { transform: translate(-30%, -30%) rotate(0deg); }
+      50%  { transform: translate(-10%, -50%) rotate(180deg); }
+      100% { transform: translate(-30%, -30%) rotate(360deg); }
+    }
+
+    /* Spotlights */
+    .spotlight {
+      position: fixed;
+      top: -60%;
+      width: 320px; height: 300%;
+      background: radial-gradient(ellipse at top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 50%, transparent 80%);
+      filter: blur(6px);
+      animation: spotlightMove 7s ease-in-out infinite alternate;
+      z-index: 1;
+      opacity: 0;
+    }
+    .spotlight.top-left { left: 10%; transform: rotate(25deg); animation-delay: 0s; }
+    .spotlight.top-right { right: 10%; transform: rotate(-25deg); animation-delay: 2s; }
+    .spotlight.side-left { left: -15%; transform: rotate(60deg); animation-delay: 4s; }
+    .spotlight.side-right { right: -15%; transform: rotate(-60deg); animation-delay: 6s; }
+
+    @keyframes spotlightMove {
+      0%   { top: -60%; opacity: 0; }
+      30%  { top: -20%; opacity: 1; }
+      70%  { top: -20%; opacity: 1; }
+      100% { top: -60%; opacity: 0; }
+    }
+
+    /* خطوط الملعب */
+    .field-lines {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background:
+        linear-gradient(to right, transparent 49.5%, white 49.5%, white 50.5%, transparent 50.5%),
+        linear-gradient(to bottom, transparent 49.5%, white 49.5%, white 50.5%, transparent 50.5%);
+      opacity: 0.5;
+      z-index: 2;
+    }
+
+    /* دائرة الوسط */
+    .center-circle {
+      position: fixed;
+      top: 50%; left: 50%;
+      width: 160px; height: 160px;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    /* Overlay شفاف */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 3;
+    }
+
+    /* فورم التسجيل */
+    .container {
+      position: relative;
+      z-index: 4;
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      max-width: 440px;
+      width: 90%;
+      text-align: center;
+      animation: popUp 1s ease forwards;
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    @keyframes popUp {
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: #0b2a4a;
+      animation: slideDown 1s ease;
+    }
+    p {
+      margin-bottom: 22px;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.5;
+      animation: fadeInText 1.5s ease;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1.5px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      font-size: 15px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
+      animation: fadeInUp 1s ease;
+    }
+    input:focus {
+      border-color: #1c6dd0;
+      outline: none;
+      box-shadow: 0 0 6px rgba(28, 109, 208, 0.4);
+      transform: scale(1.02);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    button {
+      background: linear-gradient(135deg, #0b2a4a, #1c6dd0);
+      color: #fff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: transform 0.2s ease, background 0.3s ease;
+      animation: fadeInUp 1.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #093364, #145da0);
+    }
+    button:active {
+      transform: scale(0.96);
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #555;
+      margin-top: 16px;
+      line-height: 1.4;
+      animation: fadeInText 1.8s ease;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 28px 20px;
+      }
+      h1 { font-size: 22px; }
+      p { font-size: 14px; }
+      input, button { font-size: 14px; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ✨ Glow effect -->
+  <div class="light-effect"></div>
+
+  <!-- Spotlights -->
+  <div class="spotlight top-left"></div>
+  <div class="spotlight top-right"></div>
+  <div class="spotlight side-left"></div>
+  <div class="spotlight side-right"></div>
+
+  <!-- ملعب -->
+  <div class="field-lines"></div>
+  <div class="center-circle"></div>
+  <div class="overlay"></div>
+
+  <!-- الفورم -->
+  <div class="container">
+    <h1>🏆 Join the Mondial 2026 Contest!</h1>
+    <p>Enter your name below for a chance to win <strong>exclusive tickets</strong> to Mondial 2026!</p>
+    
+    <form id="signupForm">
+      <input type="text" id="username" placeholder="👤 Enter your name" required />
+      <button type="submit">⚽ Sign Up</button>
+    </form>
+    
+    <div class="footer">
+      Don’t miss this once-in-a-lifetime chance to be part of the world’s greatest football event!
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      if (username) {
+        window.location.href = "https://smrturl.co/261d83e";
+      } else {
+        alert("⚠️ Please enter your name before signing up!");
+      }
+    });
+  </script>
+</body>
+</html>
